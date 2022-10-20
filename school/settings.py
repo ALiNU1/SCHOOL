@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     #apps
     'apps.main',
     'apps.settings',
+    'apps.teachers',
 ]
 
 MIDDLEWARE = [

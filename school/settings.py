@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'apps.main',
     'apps.settings',
     'apps.teachers',
+    'apps.users',
 ]
 
 MIDDLEWARE = [

@@ -7,4 +7,4 @@ def index(request):
     context = {
         'setting' : setting,
     }
-    return render(request, 'index.html', context)
+    return render(request, 'school/index1.html', context)

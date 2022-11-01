@@ -1,42 +1,33 @@
+{% extends 'homepage.html' %}
 {% load static %}
-<body class="text-center">
-    
-    <main class="form-signin w-100 m-auto">
-      <form>
-        <img class="mb-4" src="{% static '/docs/5.2/assets/brand/bootstrap-logo.svg' %}" alt="" width="72" height="57">
-        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-    
-        <div class="form-floating">
-          <input type="name" class="form-control" id="floatingInput" placeholder="Напишите настояшее имя">
-          <label for="floatingInput">Имя</label>
-        </div>
+{% block content%}
+{% include 'include/header.html' %}
 
-        <div class="form-floating">
-          <input type="surname" class="form-control" id="floatingPassword" placeholder="Напишите настояшию фамилию">
-          <label for="floatingPassword">Фамилия</label>
-        </div>
+<br>
+<div>
+    <input type="name" name="name" placeholder="Введите имя">
+    <label for="">Имя</label>
+</div>
 
-        <div class="form-floating">
-            <input type="phone" class="form-control" id="floatingPassword" placeholder="Номер телефона">
-            <label for="floatingPassword">Телефон</label>
-        </div>
+<div>
+    <input type="surname" name="surname" placeholder="Введите фамилию">
+    <label for="">Фамилия</label>
+</div>
 
-        <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Придумайте пароль">
-            <label for="floatingPassword">Пароль</label>
-          </div>
-        <div class="checkbox mb-3">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-        </div>
-        <!-- <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button> -->
-        <p class="mt-5 mb-3 text-muted"></p>
-      </form>
-    </main>
-    
-    
-        
-      
-    
-    </body>
+<div>
+    <input type="phone" name="phone" placeholder="Введите номер">
+    <label for="">Hомер</label>
+</div>
+
+<div>
+    <input type="password" name="password1" placeholder="Введите пароль">
+    <label for="">Пароль</label>
+</div>
+
+<div>
+    <input type="password" name="password2" placeholder="Подвердите пароль">
+    <label for="">Пароль</label>
+</div>
+
+{% include 'include/footer.html' %}
+{% endblock %}

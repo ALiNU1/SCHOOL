@@ -8,7 +8,8 @@ class User(models.Model):
     name = models.CharField(max_length = 255)
     surname = models.CharField(max_length = 255)
     phone = models.CharField(max_length = 100)
-    password = models.CharField(max_length = 255)
+    password1 = models.CharField(max_length = 255)
+    password2 = models.CharField(max_length = 255)
 
     def __str__(self):
         return self.name

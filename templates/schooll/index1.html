@@ -124,23 +124,23 @@
             </div>
         </div>
         <div class="owl-carousel courses-carousel">
+            {% for new in news %}
             <div class="courses-item position-relative">
-                {% for new in news %}
-                <img class="img-fluid" src="{{ news.photo.url }}" alt="">
+                <img class="img-fluid" src="{{ new.photo.url }}" alt="">
                 <div class="courses-text">
-                    <h4 class="text-center text-white px-3">{{ news.description }}</h4>
+                    <h4 class="text-center text-white px-3">{{ new.title }}</h4>
                     <div class="border-top w-100 mt-3">
                         <div class="d-flex justify-content-between p-4">
-                            <span class="text-white"><i class="fa fa-user mr-2"></i>{{ news.name }}</span>
-                            <span class="text-white"><i class="fa fa-star mr-2"></i>{{ news.rate }} <small></small></span>
+                            <span class="text-white"><i class="fa fa-user mr-2"></i>{{ new.name }}</span>
+                            <span class="text-white"><i class="fa fa-star mr-2"></i>{{ new.rate }} <small></small></span>
                         </div>
                     </div>
                     <div class="w-100 bg-white text-center p-4" >
-                        <a class="btn btn-primary" href="detail.html">Course Detail</a>
+                        <a class="btn btn-primary" href="{% url 'news_detail' new.id %}">Course Detail</a>
                     </div>
                 </div>
-                {% endfor %}
             </div>
+            {% endfor %}
         </div>
         <!-- <div class="row justify-content-center bg-image mx-0 mb-5">
             <div class="col-lg-6 py-5">

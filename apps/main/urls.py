@@ -1,6 +1,6 @@
-# from django.urls import path
-# from .views import article
+from django.urls import path
+from .views import news_detail
 
-# urlpatterns = [
-#     path('', article, name='article'),
-# ]
+urlpatterns = [
+    path('detail/<int:id>', news_detail, name='news_detail'),
+]

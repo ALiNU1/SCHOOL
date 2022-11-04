@@ -15,3 +15,16 @@ class News(models.Model):
     class Meta:
         verbose_name = 'Новость'
         verbose_name_plural = 'Новости'
+
+class About(models.Model):
+    title = models.CharField(max_length =255)
+    description = models.TextField()
+    photo = models.ImageField(upload_to = 'about/')
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = "О нас"
+        verbose_name_plural = "О нас"
+

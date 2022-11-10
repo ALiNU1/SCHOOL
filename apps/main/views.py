@@ -1,4 +1,3 @@
-from multiprocessing import context
 from django.shortcuts import render,redirect
 from apps.settings.models import Setting
 from .models import News,About
